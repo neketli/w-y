@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@una-ui/nuxt',
   ],
-  ssr: true,
+  ssr: false,
   components: [
     { path: '~/components', pathPrefix: false },
   ],
