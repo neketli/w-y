@@ -16,9 +16,9 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/w-y/favicon.svg' },
       ],
-      style: [
+      script: [
         {
-          innerHTML: ':root{color-scheme:light}html{color-scheme:light!important}.dark,.dark :root{--una-background:1 0 0;--una-foreground:var(--una-gray-950);--una-primary:var(--una-primary-600);--una-primary-foreground:1 0 0;--una-primary-active:var(--una-primary-500);--una-gray:var(--una-gray-600);--una-gray-active:var(--una-gray-500);--una-secondary:var(--una-gray-100);--una-secondary-foreground:var(--una-gray-900);--una-muted:var(--una-gray-100);--una-muted-foreground:var(--una-gray-500);--una-accent:var(--una-gray-50);--una-accent-foreground:var(--una-gray-700);--una-card:1 0 0;--una-card-foreground:var(--una-gray-950);--una-input:var(--una-gray-200);--una-ring:var(--una-primary-400);--una-border:var(--una-gray-200);--una-popover:1 0 0;--una-popover-foreground:var(--una-gray-950)}',
+          innerHTML: '(function(){var a=document.documentElement.classList.add;document.documentElement.classList.add=function(){var t=Array.from(arguments).filter(function(c){return c!="dark"});if(t.length)a.apply(this,t)};a.call(document.documentElement.classList,"light")})()',
         },
       ],
     },
