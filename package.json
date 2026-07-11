@@ -1,0 +1,45 @@
+{
+  "name": "wedding-invitation",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "typecheck": "nuxi typecheck",
+    "validate": "pnpm lint && pnpm typecheck"
+  },
+  "dependencies": {
+    "nuxt": "^4.4.8",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@iconify-json/lucide": "^1.2.116",
+    "@iconify-json/ph": "^1.2.0",
+    "@iconify-json/radix-icons": "^1.2.6",
+    "@nuxt/eslint": "^1.16.0",
+    "@nuxt/fonts": "^0.14.0",
+    "@types/node": "^26.1.1",
+    "@una-ui/nuxt": "1.0.0-alpha.17",
+    "@unocss/nuxt": "^66.7.5",
+    "@unocss/preset-attributify": "^66.7.5",
+    "@unocss/preset-icons": "^66.7.5",
+    "@unocss/preset-wind": "^66.7.5",
+    "@vee-validate/zod": "^4.15.1",
+    "eslint": "^10.6.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.6",
+    "prettier": "^3.9.4",
+    "typescript": "^5.7.0",
+    "unocss": "^66.7.5",
+    "vee-validate": "^4.15.1",
+    "vue-tsc": "^3.3.7",
+    "zod": "^3.24.3"
+  }
+}
