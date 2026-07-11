@@ -47,75 +47,77 @@ const onSubmit = handleSubmit(async (values) => {
 </script>
 
 <template>
-  <section id="rsvp-section" class="section-container">
-    <ScrollReveal>
-      <SectionHeading label="RSVP" title="Подтверждение" />
-    </ScrollReveal>
+  <ClientOnly>
+    <section id="rsvp-section" class="section-container">
+      <ScrollReveal>
+        <SectionHeading label="RSVP" title="Подтверждение" />
+      </ScrollReveal>
 
-    <ScrollReveal :delay="100">
-      <p class="text-body text-center max-w-2xl mx-auto mb-6">
-        {{ config.rsvp.deadlineLabel }}
-      </p>
-    </ScrollReveal>
+      <ScrollReveal :delay="100">
+        <p class="text-body text-center max-w-2xl mx-auto mb-6">
+          {{ config.rsvp.deadlineLabel }}
+        </p>
+      </ScrollReveal>
 
-    <ScrollReveal :delay="200">
-      <form class="space-y-6 max-w-xl mx-auto" @submit="onSubmit">
-        <NFormGroup label="Имя и фамилия" required>
-          <NInput v-model="name" input="solid" placeholder="Иван Иванов" />
-          <p v-if="nameError" class="text-rose-clay text-xs mt-1">{{ nameError }}</p>
-        </NFormGroup>
+      <ScrollReveal :delay="200">
+        <form class="space-y-6 max-w-xl mx-auto" @submit="onSubmit">
+          <NFormGroup label="Имя и фамилия" required>
+            <NInput v-model="name" input="solid" placeholder="Иван Иванов" />
+            <p v-if="nameError" class="text-rose-clay text-xs mt-1">{{ nameError }}</p>
+          </NFormGroup>
 
-        <NFormGroup label="Сможете ли присутствовать?" required>
-          <NRadioGroup v-model="status" class="flex gap-3">
-            <NRadioGroupItem value="yes" label="Да" />
-            <NRadioGroupItem value="no" label="Нет" />
-            <NRadioGroupItem value="maybe" label="Пока не знаю" />
-          </NRadioGroup>
-          <p v-if="statusError" class="text-rose-clay text-xs mt-1">{{ statusError }}</p>
-        </NFormGroup>
+          <NFormGroup label="Сможете ли присутствовать?" required>
+            <NRadioGroup v-model="status" class="flex gap-3">
+              <NRadioGroupItem value="yes" label="Да" />
+              <NRadioGroupItem value="no" label="Нет" />
+              <NRadioGroupItem value="maybe" label="Пока не знаю" />
+            </NRadioGroup>
+            <p v-if="statusError" class="text-rose-clay text-xs mt-1">{{ statusError }}</p>
+          </NFormGroup>
 
-        <NFormGroup label="Есть ли у вас аллергия или непереносимость?">
-          <NInput v-model="allergies"
-                  input="solid"
-                  type="textarea"
-                  :rows="2"
-                  placeholder="Напишите, если есть особенности питания"
-          />
-        </NFormGroup>
+          <NFormGroup label="Есть ли у вас аллергия или непереносимость?">
+            <NInput v-model="allergies"
+                    input="solid"
+                    type="textarea"
+                    :rows="2"
+                    placeholder="Напишите, если есть особенности питания"
+            />
+          </NFormGroup>
 
-        <NFormGroup label="Ваши предпочтения по напиткам">
-          <NInput v-model="drinks"
-                  input="solid"
-                  type="textarea"
-                  :rows="2"
-                  placeholder="Вино, шампанское, безалкогольное..."
-          />
-        </NFormGroup>
+          <NFormGroup label="Ваши предпочтения по напиткам">
+            <NInput v-model="drinks"
+                    input="solid"
+                    type="textarea"
+                    :rows="2"
+                    placeholder="Вино, шампанское, безалкогольное..."
+            />
+          </NFormGroup>
 
-        <div class="pt-2">
-          <NButton type="submit"
-                   btn="solid"
-                   block
-                   size="lg"
-          >
-            <span class="flex items-center justify-center gap-2">
-              <span class="icon-[ph--paper-plane-right-fill] text-base" />
-              Отправить ответ
-            </span>
-          </NButton>
-        </div>
+          <div class="pt-2">
+            <NButton type="submit"
+                     btn="solid"
+                     block
+                     size="lg"
+            >
+              <span class="flex items-center justify-center gap-2">
+                <span class="icon-[ph--paper-plane-right-fill] text-base" />
+                Отправить ответ
+              </span>
+            </NButton>
+          </div>
 
-        <div v-if="submitted" class="p-4 bg-olive-light/10 border border-olive-light/20 rounded-xl text-center">
-          <p class="font-sans text-sm text-olive-dark font-medium">
-            Спасибо! Ваш ответ принят.
-          </p>
-          <p class="font-sans text-xs text-stone-400 mt-1">
-            Мы свяжемся с вами при необходимости.
-          </p>
-        </div>
-      </form>
-    </ScrollReveal>
-  </section>
+          <div v-if="submitted" class="p-4 bg-olive-light/10 border border-olive-light/20 rounded-xl text-center">
+            <p class="font-sans text-sm text-olive-dark font-medium">
+              Спасибо! Ваш ответ принят.
+            </p>
+            <p class="font-sans text-xs text-stone-400 mt-1">
+              Мы свяжемся с вами при необходимости.
+            </p>
+          </div>
+        </form>
+      </ScrollReveal>
+    </section>
+  </ClientOnly>
 </template>
 
 <style scoped>
