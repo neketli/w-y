@@ -16,6 +16,11 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/w-y/favicon.svg' },
       ],
+      style: [
+        {
+          innerHTML: ':root{color-scheme:light}html{color-scheme:light!important}',
+        },
+      ],
     },
   },
   appConfig: {
