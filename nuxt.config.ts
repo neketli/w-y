@@ -11,10 +11,10 @@ export default defineNuxtConfig({
     { path: '~/components', pathPrefix: false },
   ],
   app: {
-    baseURL: '/wdvue/',
+    baseURL: '/w-y/',
     head: {
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/wdvue/favicon.svg' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/w-y/favicon.svg' },
       ],
     },
   },

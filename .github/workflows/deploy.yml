@@ -35,7 +35,7 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      - run: pnpm generate
+      - run: NUXT_APP_BASE_URL=/w-y/ pnpm generate
 
       - uses: actions/upload-pages-artifact@v3
         with:

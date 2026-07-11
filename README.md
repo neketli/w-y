@@ -2,7 +2,7 @@
 
 Одностраничный сайт-приглашение на свадьбу. Нежная, романтичная эстетика — мобильная визитка для гостей.
 
-**Демо**: https://neketli.github.io/wdvue/
+**Демо**: https://neketli.github.io/w-y/
 
 ---
 
@@ -80,4 +80,4 @@ app/composables/useWeddingConfig.ts
 
 ---
 
-[Виталик & Юлия](https://neketli.github.io/wdvue/) • 11.09.2026
+[Виталик & Юлия](https://neketli.github.io/w-y/) • 11.09.2026
