@@ -17,7 +17,8 @@ useSeoMeta({
 <template>
   <div class="min-h-screen bg-gradient-to-b from-stone-50 to-stone-100">
     <div class="w-full mx-auto bg-cream-50 min-h-screen">
-      <HeroSection />
+      <HeroVariant2 />
+      <HeroVariant3 />
       <IntroSection />
       <DividerHeart />
       <CountdownCalendar />
