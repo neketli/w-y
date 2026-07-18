@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import photo1 from '~/assets/images/photo1.png'
-import photo2 from '~/assets/images/photo2.png'
+import groomImage from '~/assets/images/groom.png'
+import brideImage from '~/assets/images/bride.png'
 
 const config = useWeddingConfig()
 const { groom, bride } = config.couple
@@ -12,10 +12,10 @@ const { full } = config.date
     <ScrollReveal :duration="800" class="relative min-h-[50vh] md:min-h-screen bg-gradient-to-br from-rose-clay/20 via-cream-200 to-rose-clay/10 flex items-center justify-center overflow-hidden">
       <div class="relative w-full max-w-sm aspect-[4/5] flex items-center justify-center">
         <div class="polaroid rotate-[-6deg] z-10 shadow-xl absolute top-1/6 left-8">
-          <img :src="photo1" alt="Photo 1" class="w-48 md:w-64 aspect-[3/4] object-cover" />
+          <img :src="brideImage" alt="Невеста" class="w-48 md:w-64 aspect-[3/4] object-cover" />
         </div>
         <div class="polaroid rotate-[8deg] z-20 shadow-xl absolute top-1/3 right-4">
-          <img :src="photo2" alt="Photo 2" class="w-36 md:w-48 aspect-[3/4] object-cover" />
+          <img :src="groomImage" alt="Жених" class="w-36 md:w-48 aspect-[3/4] object-cover" />
         </div>
       </div>
       <div class="absolute inset-0 border-[12px] border-cream-50/30 pointer-events-none" />

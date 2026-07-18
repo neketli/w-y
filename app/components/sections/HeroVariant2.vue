@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import collage from '~/assets/images/collage.png'
+import collage from '~/assets/images/collage1.png'
 
 const config = useWeddingConfig()
 const { groom, bride } = config.couple
