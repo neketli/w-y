@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import img1 from '~/assets/images/dress-code1.png'
-import img2 from '~/assets/images/dress-code2.png'
-import img3 from '~/assets/images/dress-code3.png'
+import img1 from '~/assets/images/dress-code1.webp'
+import img2 from '~/assets/images/dress-code2.webp'
+import img3 from '~/assets/images/dress-code3.webp'
 
 const config = useWeddingConfig()
 
@@ -17,8 +17,7 @@ useSeoMeta({
 <template>
   <div class="min-h-screen bg-gradient-to-b from-stone-50 to-stone-100">
     <div class="w-full mx-auto bg-cream-50 min-h-screen">
-      <HeroVariant2 />
-      <HeroVariant3 />
+      <HeroSection />
       <IntroSection />
       <DividerHeart />
       <CountdownCalendar />

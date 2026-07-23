@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import collage from '~/assets/images/collage.webp'
+
 const config = useWeddingConfig()
 const { groom, bride } = config.couple
 const { full } = config.date
@@ -7,12 +9,8 @@ const { full } = config.date
 <template>
   <section class="min-h-screen grid grid-cols-1 md:grid-cols-2 overflow-hidden">
     <ScrollReveal :duration="800" class="relative min-h-[50vh] md:min-h-screen bg-gradient-to-br from-rose-clay/20 via-cream-200 to-rose-clay/10 flex items-center justify-center">
-      <div class="polaroid rotate-[-4deg] scale-90 md:scale-110">
-        <div class="w-80 aspect-[3/4] bg-gradient-to-br from-rose-clay/30 to-cream-300 flex items-center justify-center text-cream-100 text-6xl">
-          <span class="icon-[ph--camera-fill]" />
-
-          Ваше фото здесь
-        </div>
+      <div class="polaroid rotate-[-3deg] scale-90 md:scale-110 shadow-xl">
+        <img :src="collage" alt="Свадебное фото" class="w-72 md:w-96 aspect-[3/4] object-cover" />
       </div>
       <div class="absolute inset-0 border-[12px] border-cream-50/30 pointer-events-none" />
     </ScrollReveal>
